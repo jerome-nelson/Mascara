@@ -1,0 +1,39 @@
+
+.accordion {
+	@include box-shadow();
+	.accordion-navigation, .accordion dd {
+		border-top: solid 1px $grey-dark;
+		& > .content {
+			font-size: $accordion-content-font-size;
+			font-family: $accordion-content-font;
+		}
+		& > a {
+			@include text-shadow();
+			font-weight: $accordion-navigation-font-weight;
+			text-transform: $accordion-navigation-text-style;
+			border-top: solid 1px $grey-dark;
+		}
+		&:nth-child(3n+1) > a {
+			background-color: $orange;
+			border-color: lighten($orange,10%);
+			border-bottom: solid 1px darken($orange,10%);		
+		}
+		&:nth-child(3n+2) > a {
+			background-color: $darkaqua;
+			border-color: lighten($darkaqua,10%);
+			border-bottom: solid 1px darken($darkaqua,10%);
+		}
+		&:nth-child(3n+3) > a {
+			background-color: $brown;
+			border-color: lighten($brown,10%);
+			border-bottom: solid 1px darken($brown,10%);
+		}
+		&:nth-child(3n+4) > a {
+			background-color: $yellow;
+			border-color: lighten($yellow,10%);
+			border-bottom: solid 1px darken($yellow,10%);
+		}
+		//Needs more colours (add once created mixin)
+		//Need noise pattern
+	}
+}

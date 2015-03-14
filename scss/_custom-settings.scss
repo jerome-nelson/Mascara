@@ -1,0 +1,404 @@
+//Mascara by Jerome
+//jerome-nelson.co.uk
+// This file will override certain settings for default Foundation
+
+// We use these to make sure border radius matches unless we want it different.
+$global-radius: 3px;
+$global-rounded: 1000px;
+
+// We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
+$cursor-crosshair-value: crosshair;
+$cursor-default-value: default;
+$cursor-disabled-value: not-allowed;
+$cursor-pointer-value: pointer;
+$cursor-help-value: help;
+$cursor-text-value: text;
+
+
+$yes: true;
+$no: false;
+
+//List of Colours
+$green: #158560;
+$black: #000;
+$grey: #656868;
+$yellow: #fddb1d;
+$white: #fff;
+$grey-dark: #404040;
+$brown: #6c604e; 
+$darkaqua: #22566e; 
+$orange: #bb892c;
+
+
+//Backgrounds
+$body-bg: $grey-dark;
+$column-gutter: rem-calc(30);
+
+//Font Library
+$straight: Calibri, Arial, sans serif;
+$title: 'Microsoft New Tai Lue', serif;
+
+//Custom Variables
+//Any custom variables for this theme are here
+$h5-font-size: rem-calc(15);
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$opposite-direction: right;
+
+
+//Compass Config
+
+//Text-Shadow Defaults
+$default-text-shadow-color: rgba(darken($grey,50%),0.7);
+//These defaults make the arguments optional for this mixin If you like, set different defaults in your project
+$default-text-shadow-h-offset: -1px;
+$default-text-shadow-v-offset: 0px;
+$default-text-shadow-blur: 0px;
+$default-text-shadow-spread: 0px;
+
+//Remove all styles but the Grid
+$include-html-classes: $no;
+$include-html-grid-classes: $yes;
+$include-html-accordion-classes: $yes;
+$include-html-block-grid-classes: $yes;
+$include-html-nav-classes: $no;
+$include-html-off-canvas-classes: $yes;
+$include-html-icon-bar-classes: $yes;
+$include-html-top-bar-classes: $no;
+
+//Alert Box
+$alert-close-color: rgba($white,0.9);
+$alert-font-weight: $font-weight-bold;
+$alert-font-color: rgba($white,0.9);
+$alert-font-color-alt: rgba($white,0.9);
+$alert-font-size: rem-calc(16) ;
+$alert-padding-top: 0;
+$alert-padding-default-float: 0;
+$alert-padding-opposite-direction: 0;
+$alert-padding-bottom: 0;
+
+
+// 01. Accordion
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$accordion-navigation-padding: rem-calc(10);
+$accordion-navigation-bg-color: $grey;
+$accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
+$accordion-navigation-font-color: $white;
+$accordion-navigation-font-size: $h5-font-size;
+$accordion-navigation-font-family: $title;
+$accordion-content-padding: ($column-gutter/2);
+$accordion-content-active-bg-color: $grey;
+
+
+
+//New Attributes
+$accordion-navigation-font-weight: $font-weight-bold;
+$accordion-navigation-text-style: uppercase;
+$accordion-content-font-size: rem-calc(12);
+$accordion-content-font: $straight;
+
+
+
+
+$alertcontent-padding-top: rem-calc(14) ;
+$alertcontent-padding-default-float: $alertcontent-padding-top ;
+$alertcontent-padding-opposite-direction: $alertcontent-padding-top + rem-calc(10) ;
+$alertcontent-padding-bottom: $alertcontent-padding-top ;
+
+
+
+
+//For Top-bar
+$include-html-top-bar-classes: $yes;
+$include-html-nav-classes: $yes;
+$include-html-nav-classes: $no;
+//$include-html-form-classes: $yes;
+//$include-html-button-classes: $yes;
+$include-html-visibility-classes: true;
+
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em, 99999999em);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// Legacy
+$small: $medium-up;
+$medium: $medium-up;
+$large: $large-up;
+
+
+//
+// Top Bar Variables
+//
+
+// Background color for the top bar
+$topbar-bg-color: $green;
+$topbar-bg: $topbar-bg-color;
+
+// Height and margin
+$topbar-height: rem-calc(40);
+$topbar-margin-bottom: 0;
+
+// Controlling the styles for the title in the top bar
+$topbar-title-weight: $font-weight-bold;
+$topbar-title-font-size: rem-calc(17);
+
+// Style the top bar dropdown elements
+$topbar-dropdown-bg: scale-lightness($grey,35%);
+$topbar-dropdown-link-color: $black;
+$topbar-dropdown-link-bg: $topbar-dropdown-bg;
+$topbar-dropdown-link-bg-hover: darken($topbar-dropdown-bg,10%);
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $black;
+$topbar-dropdown-toggle-alpha: 0.4;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: $white;
+$topbar-link-color-hover: $yellow;
+$topbar-link-color-active: darken($green,5%);
+$topbar-link-color-active-hover: $yellow;
+$topbar-link-weight: $font-weight-normal;
+$topbar-link-font-size: rem-calc(13);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg: $topbar-bg;
+$topbar-link-bg-hover: darken($green,10%);
+$topbar-link-bg-color-hover: $white;
+$topbar-link-bg-active: lighten($green,5%);
+$topbar-link-bg-active-hover: scale-color(lighten($green,5%), $lightness: -14%);
+$topbar-link-font-family: Arial;
+$topbar-link-text-transform: none;
+$topbar-link-padding: $topbar-height / 3;
+$topbar-back-link-size: $h5-font-size;
+$topbar-link-dropdown-padding: rem-calc(20);
+$topbar-button-font-size: rem-calc(12);
+$topbar-button-top: 7px;
+
+$topbar-dropdown-label-color: $grey;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: $font-weight-bold;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: $yellow;
+
+// Top menu icon styles
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: rem-calc(13);
+$topbar-menu-link-weight: $font-weight-bold;
+$topbar-menu-link-color: $white;
+$topbar-menu-icon-color: $white;
+$topbar-menu-link-color-toggled: $yellow;
+$topbar-menu-icon-color-toggled: $yellow;
+$topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
+
+// Transitions and breakpoint styles
+$topbar-transition-speed: 300ms;
+// Using rem-calc for the below breakpoint causes issues with top bar
+$topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+$topbar-media-query: $medium-up;
+$topbar-breakpoint: #{lower-bound($medium-range)} ; // Change to 9999px for always mobile layout
+$topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
+
+// Top-bar input styles
+$topbar-input-height-value: 20;
+$topbar-input-height: rem-calc($topbar-input-height-value);
+$topbar-button-expand-line-height: $topbar-input-height/125; 
+// (5 where exponent is negative three (-3)
+
+
+// Divider Styles
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+
+// Sticky Class
+$topbar-sticky-class: ".sticky";
+$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+
+//Block Grid
+$block-grid-default-spacing: rem-calc(20);
+
+//Breadcrumbs
+
+// We use this to set the background color for the breadcrumb container.
+$crumb-bg: adjust-lightness($grey-dark,-15);
+
+//Extra Options
+$crumb-li-padding: rem-calc(9 14 9);
+
+
+// We use these to set the padding around the breadcrumbs.
+$crumb-padding: 0;
+$crumb-side-padding: rem-calc(12) ;
+
+// We use these to control border styles.
+$crumb-function-factor: -10% ;
+$crumb-border-size: 0;
+$crumb-border-style: none;
+$crumb-border-color: transparent;
+//$crumb-radius: $global-radius ;
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(12);
+$crumb-font-color: $grey;
+$crumb-font-color-current: $orange ;
+$crumb-font-color-unavailable: $darkaqua ;
+$crumb-font-transform: uppercase ;
+$crumb-link-decor: underline ;
+
+// We use these to control the slash between breadcrumbs
+//$crumb-slash-color: $base ;
+$crumb-slash: " ";
+
+//Off Canvas
+$tabbar-bg: $grey ;
+$tabbar-height: rem-calc(70);
+$tabbar-icon-width: $tabbar-height;
+$tabbar-line-height: $tabbar-height;
+$tabbar-color: $white;
+$tabbar-middle-padding: 0 rem-calc(5);
+
+// Off Canvas Divider Styles
+$tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%) ;
+$tabbar-right-section-border: $tabbar-left-section-border;
+
+
+// Off Canvas Tab Bar Headers
+$tabbar-header-color: $white ;
+$tabbar-header-weight: $font-weight-bold ;
+$tabbar-header-line-height: $tabbar-height ;
+$tabbar-header-margin: 0 ;
+
+// Off Canvas Menu Variablesange
+$off-canvas-width: rem-calc(300) ;
+$off-canvas-bg: adjust-lightness($grey-dark, -10) ;
+$off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
+
+// Off Canvas Menu List Variables
+$off-canvas-label-padding: 0.3rem rem-calc(15);
+$off-canvas-label-color: $brown;
+$off-canvas-label-text-transform: uppercase;
+$off-canvas-label-font-size: rem-calc(12);
+$off-canvas-label-font-weight: $font-weight-bold;
+$off-canvas-label-bg: $yellow;
+$off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+$off-canvas-label-border-bottom: none;
+$off-canvas-label-margin: 0;
+$off-canvas-link-padding: rem-calc(10, 15);
+$off-canvas-link-color: rgba($white, 0.7);
+$off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+$off-canvas-back-bg: #444;
+$off-canvas-back-border-top: $off-canvas-label-border-top;
+$off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
+$off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+$off-canvas-back-hover-border-bottom: none;
+
+// Off Canvas Menu Icon Variables
+$tabbar-menu-icon-color: $white;
+$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
+
+$tabbar-menu-icon-text-indent: rem-calc(35);
+$tabbar-menu-icon-width: $tabbar-icon-width;
+$tabbar-menu-icon-height: $tabbar-height;
+$tabbar-menu-icon-padding: 0;
+
+$tabbar-hamburger-icon-width: rem-calc(16);
+$tabbar-hamburger-icon-left: false;
+$tabbar-hamburger-icon-top: false;
+$tabbar-hamburger-icon-thickness: 1px;
+$tabbar-hamburger-icon-gap: 6px;
+
+// Off Canvas Back-Link Overlay
+$off-canvas-overlay-transition: background 300ms ease;
+$off-canvas-overlay-cursor: pointer;
+$off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.5), 4px 0 4px rgba($black, 0.5);
+$off-canvas-overlay-background: rgba($white, 0.2);
+$off-canvas-overlay-background-hover: rgba($white, 0.05);
+
+// Transition Variables
+$menu-slide: "transform 500ms ease";
+
+//Extra Custom Settings
+$off-canvas-li-font-size: rem-calc(14);
+$off-canvas-li-color: adjust-lightness($grey,-10);
+$off-canvas-li-color-hover: $white;
+$off-canvas-li-color-active: $yellow;
+
+$include-html-button-classes: $include-html-classes ;
+
+// We use these to build padding for buttons.
+$button-tny: rem-calc(10) ;
+$button-sml: rem-calc(14) ;
+$button-med: rem-calc(16) ;
+$button-lrg: rem-calc(18) ;
+
+// We use this to control the display property.
+$button-display: inline-block ;
+$button-margin-bottom: rem-calc(20) ;
+
+// We use these to control button text styles.
+$button-font-family: $straight ;
+$button-font-color: $black;
+$button-font-color-alt: $white;
+$button-font-tny: rem-calc(11) ;
+$button-font-sml: rem-calc(13) ;
+$button-font-med: rem-calc(16) ;
+$button-font-lrg: rem-calc(20) ;
+$button-font-weight: $font-weight-normal ;
+$button-font-align: center ;
+
+// We use these to control various hover effects.
+$button-function-factor: -20% ;
+
+// We use these to control button border styles.
+$button-border-width: 0 ;
+$button-border-style: solid ;
+$button-bg-color: $yellow;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor) ;
+$button-border-color: $button-bg-hover ;
+$secondary-button-bg-hover: scale-color($orange, $lightness: $button-function-factor) ;
+$secondary-button-border-color: $secondary-button-bg-hover ;
+$success-button-bg-hover: scale-color($green, $lightness: $button-function-factor) ;
+$success-button-border-color: $success-button-bg-hover ;
+$alert-button-bg-hover: scale-color($grey, $lightness: $button-function-factor) ;
+$alert-button-border-color: $alert-button-bg-hover ;
+$warning-button-bg-hover: scale-color($orange, $lightness: $button-function-factor) ;
+$warning-button-border-color: $warning-button-bg-hover ;
+$info-button-bg-hover: scale-color($black, $lightness: $button-function-factor) ;
+$info-button-border-color: $info-button-bg-hover ;
+
+// We use this to set the default radius used throughout the core.
+$button-radius: $global-radius ;
+$button-round: $global-rounded ;
+
+// We use this to set default opacity and cursor for disabled buttons.
+$button-disabled-opacity: 0.7 ;
+$button-disabled-cursor: $cursor-default-value ;
+

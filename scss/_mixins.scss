@@ -1,0 +1,89 @@
+@import "compass/css3";
+
+@mixin embevel_color($color,$position,$li_mode: false,$custom-ratio-pos: 15,$custom-ratio-neg: -15, $custom-element-ratio: 10,$custom-gradient: false) {
+	@if $li_mode {
+		
+		$oppositedir: nth((top,left,right,bottom),index((bottom,right,left,top),$position));
+		
+		& + li {
+			border-#{$oppositedir}:  solid 1px scale-lightness($color, $custom-ratio-pos); 
+		}
+		* > &:first-child {
+			border-left-color: transparent;
+		}
+		* > &:last-child {
+			border-right: none;
+		}
+		& {
+			border-#{$position}: solid 1px adjust-lightness($color, $custom-ratio-neg);		
+			border-#{$oppositedir}:  solid 1px scale-lightness($color, $custom-ratio-pos); 	
+		}
+		&:hover {
+			@include embevel_element(scale-lightness($color, $custom-element-ratio), $position, no,$gradient: $custom-gradient);
+		}
+	}
+	@elseif $position == 'top' or $position == 'bottom' or $position == 'left' or $position == 'right' and type-of($color) == 'color' {
+		&:before {
+			border-#{$position}: solid 1px scale-lightness($color, $custom-ratio-pos);
+		}
+		border-#{$position}: solid 1px adjust-lightness($color, $custom-ratio-neg);
+	}
+	@elseif $position == 'all' {
+		border: solid 1px adjust-lightness($color, $custom-ratio-neg);
+		outline: solid 1px adjust-lightness($color, $custom-ratio-pos);	
+	}
+	@elseif type-of($color) != 'color' {
+		@error "#{$color} is not a valid colour.";
+	}
+	@else {	
+		@error "#{$position} is not a valid value";
+	}
+}
+
+@mixin embevel_element($color, $position: top,$text-shadow: yup,$custom-ratio-pos: 15,$custom-ratio-neg: -15, $custom-element-ratio: 10, $gradient: false,$fontcolor: scale-lightness($color,75)){
+
+	@if type-of($color) != 'color' {
+		@error "#{$color} is not a valid colour.";
+	}
+	@else {
+		
+		//Set default text-shadow color
+		$default-text-shadow-color: rgba(shade($color,75%),.75);
+
+		@include embevel_color($color,$position,false,$custom-ratio-pos,$custom-ratio-neg, $custom-element-ratio);
+		
+		@if $gradient {
+			@include background-image(linear-gradient($color,adjust-lightness($color,5)));
+		}
+		@else {
+			background: $color;
+		}
+		color: $fontcolor !important;
+		@if $text-shadow == yup {
+			@include single-text-shadow;
+		}
+	}
+}
+
+@mixin hover-color($color) {
+	@if $color != '' and type-of($color) == 'color' {
+		& {
+			@include background(adjust-lightness($color,5));
+		}
+	}
+	@else {
+		@error "The color value #{$color} entered is not valid";
+	}
+}
+
+@mixin dead-button($color) {
+		background-image: transparent !important;
+		background: adjust-lightness($color, -5) !important;
+		&, & > * {				
+			color: adjust-lightness($color, -1) !important;
+			@include text-shadow(0 0 0 transparent !important);
+		}
+		border-color: adjust-lightness($color, -5) !important;
+		@include box-shadow(0 0 0 transparent !important);
+		@include text-shadow(0 0 0 transparent);
+}

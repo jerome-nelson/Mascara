@@ -1,0 +1,79 @@
+@import "settings";
+@import "custom-settings";
+// @import "foundation";
+@import "mixins";
+@import "bet365/extends";
+
+// Or selectively include components
+
+//The grid stays as The Grid
+@import 
+"compass/css3/text-shadow",
+"foundation/components/grid",
+"foundation/components/visibility",
+"foundation/components/alert-boxes", 
+"foundation/components/accordion",
+"foundation/components/block-grid",
+"foundation/components/buttons",
+"foundation/components/breadcrumbs",
+"foundation/components/top-bar",
+"foundation/components/offcanvas",
+"foundation/components/icon-bar"
+;
+
+//Need CSS Reset stylesheet
+abbr, bdo, b, em, samp, code, kbd{
+	display: block;
+}
+img {
+	@include single-box-shadow;
+}
+*:before {
+	display: block;
+	content: " ";
+	width: 100%;
+}
+* > a {
+	text-decoration: none;
+}
+pre {
+	margin: 0;
+}
+ul, p, blockquote, dl,h1,h2,h3,h4,h5,h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;}
+
+.bg-embossed {
+	&.darkgrey {
+		@include embevel_element($crumb-bg);
+	}
+}
+
+//Common Elements
+@import "bet365/common";
+
+//Alert Box
+@import "bet365/alert-box";
+
+//Top Bar
+//Removes the current styling of top-bar button
+//TODO: Need to tidy		
+@import "bet365/top-bar";
+
+//Accordion
+@import "bet365/accordion";
+
+//Block Grid
+@import "bet365/block-grid";
+
+//Breadcrumbs
+@import "bet365/breadcrumbs";
+
+//Off Canvas
+@import "bet365/off-canvas";
+
+//Button
+@import "bet365/button";

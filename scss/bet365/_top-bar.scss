@@ -1,0 +1,152 @@
+@import "compass/css3";
+.top-bar {
+	.name {
+		a {
+			font-family: $title;
+		}
+	}
+	.toggle-topbar.menu-icon a, .toggle-topbar.menu-icon a {
+		text-transform: uppercase;
+		font-weight: bold;
+		@include text-shadow();
+	}
+	input {
+		border: solid 1px  darken($green,10%);
+		border-radius: $global-radius;
+		background: darken($green,5%);
+		color: lighten($green,10%);
+	}
+}
+
+.top-bar-section {
+//ul li:hover:not(.has-form) > a {
+	ul li  {
+		background-color: darken($green,10%);
+		border-right: solid 1px darken($green, 5%);
+		border-left: solid 1px lighten($green, 5%);
+
+		> a {
+			border-left: solid 1px darken($green, 5%);
+			border-right: solid 1px lighten($green, 5%);
+		}
+		color: #fddb1d;
+	}
+	.has-dropdown {
+	    & > a:after {  
+			@if ($topbar-arrows){
+             @include css-triangle($topbar-dropdown-toggle-size, rgba($topbar-dropdown-toggle-color, $topbar-dropdown-toggle-alpha), $default-float);
+            }
+		
+	  }
+	} 
+}
+@media #{$medium-up} {
+.top-bar-section {
+	.has-dropdown {
+		& > a {
+			padding-right: rem-calc(15+ 20) !important;
+		}
+		& > a:after {
+			height: rem-calc(12);
+			width: rem-calc(15);
+			content: " ";
+			display: table;
+			clear: both;
+			background-image: url('../svg/down119.svg') !important;
+			background-position: 50% 90% !important;
+			background-repeat: no-repeat !important;
+			fill: rgba($white, 0.7);
+			stroke: darken($green, 5%);	
+		}
+	} 
+}
+
+}
+
+
+@media #{$small-only} {
+	.top-bar-section {
+		ul li  {
+			&, > a {
+				border-left: none;
+				border-right: none;
+			}
+			> a {
+				border-bottom: solid 1px darken($green, 5%);
+				border-top: solid 1px lighten($green, 5%);
+			}
+					
+			&.has-button {
+				padding: 0 !important;
+				border: none;
+			}
+		}
+	}
+	.top-bar { 
+		.title-area {
+			border-bottom:solid 1px darken($green, 5%);
+		}
+	}
+}
+@media #{$medium-up} {
+      .top-bar {
+
+        input,
+        .button,
+        button {
+		padding: $topbar-button-font-size;
+		font-size: $topbar-button-font-size;
+          position: relative;
+          top: (($topbar-height - $topbar-input-height*2) / 2);
+        }
+		input {
+			height: $topbar-input-height;
+		}
+		.button,
+        button {
+			height: auto !important;
+			&.expand{
+				line-height: $topbar-button-expand-line-height;
+				height: $topbar-input-height !important;
+				top: 0 !important;
+				
+			}
+		}
+		ul.dropdown {
+			padding-top: rem-calc(20);
+			&:before {
+				width: 0;
+				position: relative;
+				right: -83%; //Need to make sure that this always relates to the dropdown arrow 
+				border-left: 12px solid transparent;
+				border-right: 12px solid transparent;
+				border-bottom: 12px solid $topbar-dropdown-bg;			
+			}
+			
+			li:first-child + li + li, li:first-child + li + li > a {
+				@include border-radius($global-radius*2 $global-radius*2 0 0);				
+			}
+			li:last-child, li:last-child > a {
+				@include border-radius(0 0 $global-radius*2 $global-radius*2);
+			}
+			li {
+				background: $topbar-dropdown-bg;
+				border-top: solid 1px darken($topbar-dropdown-bg, 5%);
+				border-bottom: solid 1px lighten($topbar-dropdown-bg, 5%);
+			//	@include box-shadow(1px 1px 4px 1px rgba($black, 0.9));
+				
+				&, > a {
+					border-left: none;
+					border-right: none;
+				}
+				
+				 > a:active,&.active {
+					background: rgba($black, 0.5) !important;
+				}
+			}
+		}
+	}
+	.top-bar-section .dropdown li:not(.has-form) > a:not(.button) {
+			background: $topbar-dropdown-bg !important;
+	}
+}

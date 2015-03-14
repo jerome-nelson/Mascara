@@ -1,0 +1,78 @@
+@import "../mixins";
+@import "extends";
+	
+$newgrey: adjust-hue($grey, 15);
+
+
+//Alert Boxes
+.alert-box {
+	@include embevel_color($newgrey, top);
+    @include alert($bg: $newgrey, $radius: true);
+	
+	& {
+		font-family: $straight;
+		color: black;
+		font-weight: $font-weight-normal;
+	}
+	
+    &.radius    { @include radius($alert-radius); }
+    &.round     { 
+		&:before {
+			border: none;
+		}
+		@include radius($global-rounded); 
+	}
+	
+	
+    &.success { 
+		@include alert-style($green);
+		&:hover {
+			@include hover-color($green);		
+		}
+		@include embevel_color($green, top);
+	  }
+      &.warning {
+	  
+			$newblack: adjust-hue($black, 20);
+	  
+	  		@include alert-style($newblack);
+			&:hover {
+				@include hover-color($newblack);		
+			}
+			@include embevel_color($newblack, top);
+	  }
+      &.secondary { 
+	  	  	@include alert-style($yellow);
+			&:hover {
+				@include hover-color($yellow);		
+			}
+			@include embevel_color($yellow, top);
+	  }
+      &.info { 
+	  
+		$newgreen: adjust-lightness($green, 10);
+	  
+		@include alert-style($newgreen);
+		
+		&:hover {
+			@include hover-color($newgreen);		
+		}
+		@include embevel_color($newgreen, top);	  	
+	  }
+	  
+	 .text {
+		padding: $alertcontent-padding-top $alertcontent-padding-opposite-direction $alertcontent-padding-bottom $alertcontent-padding-default-float;
+		@extend %text-title-styling;
+	}
+	&.success, &.secondary, &.warning, .close {
+	}
+	 .close {
+		@include alert-close();
+	  }
+	  &.alert-close {
+		opacity: 0;
+	  }
+  & {
+	border: solid 1px rgba($grey, 0.50);
+  }
+}

@@ -1,0 +1,32 @@
+.left-off-canvas-menu {
+	ul {
+		li {
+			font-size: $off-canvas-li-font-size;
+		//	background-image: image-url('noise.png') !important;
+			&, & > a,& > a:visited {
+				color: $off-canvas-li-color;
+			}
+			& > a:active {
+				color: $off-canvas-li-color-active;
+			}
+			> * {
+			padding-left: rem-calc(10);
+			}
+			&:before {
+				height: 0;
+			//	width: 0;			
+			}
+			
+			& a:before  {
+				display: inline !important;
+			}
+			@include embevel_element(adjust-lightness($grey-dark, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
+			&:hover, &.selected {
+				@include embevel_element($grey,$gradient: yes,$text-shadow: false);
+			}
+			&:hover {
+				color: $off-canvas-li-color-hover;
+			}
+		}
+	}
+}

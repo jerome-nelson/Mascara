@@ -1,0 +1,34 @@
+@import "../mixins";
+@import "extends";
+
+
+.breadcrumbs {
+  @include crumb-container;
+  display: table;
+  table-layout: fixed;
+	a {
+		display: block;
+	}
+  li {
+	float: none !important;
+	display: table-cell;
+	vertical-align: top;
+    @include crumbs;
+	@include embevel_color($crumb-bg,left,true);
+	> a {
+		@extend %text-title-styling; 
+	}
+	&:hover {
+		@include hover-color($crumb-bg);
+	}
+	&.unavailable  {
+		@include dead-button($crumb-bg);
+	}
+	&.current {
+		@include embevel_element(scale-lightness($crumb-bg,5),left);
+	}
+	a {
+		padding: $crumb-li-padding;
+	}
+  }
+}

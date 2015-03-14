@@ -1,0 +1,8 @@
+@import "custom-settings";
+
+%text-title-styling {
+	text-transform: uppercase;
+	font-weight: bold;
+	@include text-shadow();	
+	font-family: $straight;
+}

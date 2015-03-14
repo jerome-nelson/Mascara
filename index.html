@@ -1,0 +1,471 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/bet365.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+		
+        <!-- whatever you want goes here -->
+        <ul class="offcanvas-list">
+          <li><a href="#">Item 1</a></li>
+		  <li class="selected"><a href="#">Hyperlink</a></li>
+		  <li><abbr title="Abbreviation Tag">Abbreviation</abbr></li>
+		  <li><address>This was created by Jerome Nelson in London UK</address></li>
+		  <li><b>Some bold text here.</b></li>
+		  <li>
+			<bdo dir="rtl">
+				This text will go right-to-left.
+			</bdo>
+		  </li>
+		  <li><blockquote cite="http://www.worldwildlife.org/who/index.html">This is a quote</blockquote></li>
+		  <li><button>Click me!</button></li>
+		  <li><p><cite>The Mascara Project</cite> is created by Jerome Nelson.</p></li>
+		  <li><code>This is a tag for &lt;code&gt;&lt;/code&gt;</code></li>
+		  <li>
+			<dl>
+			  <dt>Coffee</dt>
+			  <dd>Black hot drink</dd>
+			  <dt>Milk</dt>
+			  <dd>White cold drink</dd>
+			</dl>		  
+		</li>
+		<li>I no longer prefer <del>coffee</del> (&lt;del&gt; tag added here).</li>
+		<li><em>Emphasised Text</em></li>
+		<li>
+			<h1>This is a heading</h1>
+			<h2>This is a heading</h2>
+			<h3>This is a heading</h3>
+			<h4>This is a heading</h4>
+			<h5>This is a heading</h5>
+			<h6>This is a heading</h6>
+			
+			<hr />
+			
+			<h1><i>This</i> Changes everything</h1>
+		</li>
+		<li><kbd>A + Space</kbd></li>
+		<li>Take this text and <mark>Highlight This</mark></li>
+		<li>Meter (This is a meter highlighting a single value): <meter value="0.6">60%</meter></li>
+		<li>Downloading progress: <progress value="22" max="100"></progress></li>
+		<li>
+			<p><s>This text used to be correct.</s></p>
+			<p>This text is the correct one.</p>
+		</li>
+		<li>
+			<pre>
+			Text in a pre element
+			is displayed in a fixed-width
+			font, and it preserves
+			both      spaces and
+			line breaks
+			</pre>
+		</li>
+		<li>
+			<p>WWF's goal is to: 
+				<q>Build a future where people live in harmony with nature.</q>
+			We hope they succeed.</p>
+		</li>
+		<li>
+			<samp>Sample output from a computer program</samp>
+		</li>
+		<li>
+			<details>
+			  <summary>Copyright 1999-2014.</summary>
+			  <p> - by Refsnes Data. All Rights Reserved.</p>
+			  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+			</details>
+		</li>
+		<li>
+			<p>We open at <time>10:00</time> every morning.</p>
+			<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+		</li>
+      </ul>
+    </aside>
+
+	<!-- Top Bar Component -->
+	<div class="fixed sticky">
+		<nav class="top-bar sticky" data-topbar role="navigation">
+		  <ul class="title-area">
+			<li class="name">
+			  <h1><a href="./index.html">Mascara</a></h1>
+			</li>
+			 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		  </ul>
+
+		  <section class="top-bar-section">
+			<!-- Right Nav Section -->
+			<ul class="right">
+			  <li class="active"><a href="#">Right Button Active</a></li>
+			  <li class="has-dropdown">
+				<a href="#">Right Button Dropdown</a>
+				<ul class="dropdown">
+				  <li><a href="#">First link in dropdown</a></li>
+				  <li class="active"><a href="#">Active link in dropdown</a></li>
+				</ul>
+			  </li>
+			</ul>
+
+			<!-- Left Nav Section -->
+			<ul class="left">
+			  <li><a href="#">Left Nav Button</a></li>
+			  <li class="has-form">
+				  <div class="row collapse">
+					<div class="large-8 small-9 columns">
+					  <input type="text" placeholder="Find Stuff">
+					</div>
+					<div class="large-4 small-3 columns">
+					  <a href="#" class="alert button expand">Search</a>
+					</div>
+				  </div>
+			   </li>
+			   <li class="has-button">
+  <a href="http://foundation.zurb.com/docs" class="button">Get Lucky</a>
+</li>
+			</ul>
+		  </section>
+		</nav>	
+	</div>
+	<!-- End of Top Bar Component -->
+
+	
+	<!-- Alert Boxes Component -->
+	<section class="row">
+		<div class="small-12 columns">
+			<div data-alert class="alert-box">
+				<div class="text">This is a standard alert-box</div>		 
+				<a href="#" class="close">&times;</a>
+			</div>
+			<div data-alert class="alert-box success radius">
+			  <div class="text">This is a success alert with a radius.</div>
+			  <a href="#" class="close">&times;</a>
+			</div>
+
+			<div data-alert class="alert-box warning">
+			  <div class="text">This is a warning alert that is rounded.</div>
+			  <a href="#" class="close">&times;</a>
+			</div>
+
+			<div data-alert class="alert-box info radius">
+			  <div class="text">This is an info alert with a radius.</div>
+			  <a href="#" class="close">&times;</a>
+			</div>
+
+			<div data-alert class="alert-box alert round">
+			  <div class="text">This is an alert - alert that is rounded.</div>
+			  <a href="#" class="close">&times;</a>
+			</div>
+
+			<div data-alert class="alert-box secondary">
+			  <div class="text">This is a secondary alert.</div>
+			  <a href="#" class="close">&times;</a>
+			</div>
+		</div>
+	</section>
+	<!-- end of Alert Boxes Component -->
+
+	<!-- Icon Bar -->
+	<div class="row">
+		<div class="icon-bar five-up">
+		  <a class="item">
+			<img src="../assets/img/images/fi-home.svg" >
+			<label>Home</label>
+		  </a>
+		  <a class="item">
+			<img src="../assets/img/images/fi-bookmark.svg" >
+			<label>Bookmark</label>
+		  </a>
+		  <a class="item">
+			<img src="../assets/img/images/fi-info.svg" >
+			<label>Info</label>
+		  </a>
+		  <a class="item">
+			<img src="../assets/img/images/fi-mail.svg" >
+			<label>Mail</label>
+		  </a>
+		  <a class="item">
+			<img src="../assets/img/images/fi-like.svg" >
+			<label>Like</label>
+		  </a>
+		</div>
+    </div>
+	<!-- End of Icon Bar -->
+
+	
+		<div class="row">	
+		<a class="left-off-canvas-toggle" href="#" >Menu</a>
+
+		<!-- main content goes here -->
+		<p>Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire. Hari Seldon, a mathematician and psychologist, has developed psychohistory, a new field of science and psychology that equates all possibilities in large societies to mathematics, allowing for the prediction of future events.</p>
+
+	  <!-- close the off-canvas menu -->
+	  <a class="exit-off-canvas"></a>
+	</div>
+
+	
+	<!-- Accordion Component -->
+	<section class="row">
+		<div class="small-12 columns">
+			<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
+			<ul class="accordion" data-accordion>
+			  <li class="accordion-navigation">
+				<a href="#panel1a">Accordion 1</a>
+				<div id="panel1a" class="content active">
+				  Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			  </li>
+			  <li class="accordion-navigation">
+				<a href="#panel2a">Accordion 2</a>
+				<div id="panel2a" class="content">
+				  Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			  </li>
+			  <li class="accordion-navigation">
+				<a href="#panel3a">Accordion 3</a>
+				<div id="panel3a" class="content">
+				  Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			  </li>
+			</ul>
+		</div>
+	</section>
+	<!-- end of Accordion Component -->
+	
+	<!-- Block Grid Component -->
+	<section class="row">
+		<div class="small-12 columns">
+			<ul class="bg-greydark small-block-grid-4">
+				<li class="has-thumb has-header">
+					<img src="images/thumbnail-test.png" alt="" />
+										<h5>New</h5>
+				</li>
+				<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+								<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+
+								<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+				<li class="has-thumb has-header">
+					<img src="images/thumbnail-test.png" alt="" />
+										<h5>New</h5>
+				</li>
+				<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+								<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+
+								<li class="has-header">
+					<h5>New</h5>
+					<p>Bla blah bl blargh. Test te t tested</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- end of Block Grid Component -->
+	
+	<!-- Breadcrumbs Component -->
+	<div class="bg-embossed darkgrey">
+		<section class="row">
+			<div class="small-12 columns">
+				<ul class="breadcrumbs">
+					<li><a href="#">Testing</a></li>
+					<li class="unavailable"><a href="">Testing</a></li>
+					<li class="current"><a href="#">Testing</a></li>
+				</ul>
+			</div>
+		</section>
+	</div>	
+	<!-- end of Breadcrumbs Component -->
+	
+	<!-- Interchange Component -->
+	<section class="row">
+		<div class="columns small-12">
+			<img data-interchange="[images/interchange-small-test.jpg, (small)], [images/interchange-large-test.jpg, (large)]">
+			<noscript><img src="images/interchange-small-test.jpg"></noscript>
+		</div>	
+	</section>
+	<!-- End of Interchange Component -->
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Welcome to Foundation</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+          <p>Once you've exhausted the fun in this document, you should check out:</p>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
+            </div>
+            <div class="large-4 medium-4 columns">
+              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 medium-4 medium-push-2 columns">
+              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+            </div>
+            <div class="large-4 medium-4 medium-pull-2 columns">
+              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-8 medium-8 columns">
+        <h5>Here&rsquo;s your basic grid:</h5>
+        <!-- Grid Example -->
+
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="callout panel">
+              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+          <div class="large-6 medium-6 columns">
+            <div class="callout panel">
+              <p>Six columns</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+          <div class="large-4 medium-4 small-4 columns">
+            <div class="callout panel">
+              <p>Four columns</p>
+            </div>
+          </div>
+        </div>
+        
+        <hr />
+                
+        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+        <form>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-12.columns" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <label>Input Label</label>
+              <input type="text" placeholder="large-4.columns" />
+            </div>
+            <div class="large-4 medium-4 columns">
+              <div class="row collapse">
+                <label>Input Label</label>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="small-9.columns" />
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Select Box</label>
+              <select>
+                <option value="husker">Husker</option>
+                <option value="starbuck">Starbuck</option>
+                <option value="hotdog">Hot Dog</option>
+                <option value="apollo">Apollo</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 medium-6 columns">
+              <label>Choose Your Favorite</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+            </div>
+            <div class="large-6 medium-6 columns">
+              <label>Check these out</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Textarea Label</label>
+              <textarea placeholder="small-12.columns"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>     
+
+      <div class="large-4 medium-4 columns">
+        <h5>Try one of these buttons:</h5>
+        <p><a href="#" class="small button">Simple Button</a><br/>
+        <a href="#" class="small radius button">Radius Button</a><br/>
+        <a href="#" class="small round button">Round Button</a><br/>            
+        <a href="#" class="medium success button">Success Btn</a><br/>
+        <a href="#" class="medium alert button">Alert Btn</a><br/>
+        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+        <div class="panel">
+          <h5>So many components, girl!</h5>
+          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
+          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>	
+  </body>
+</html>
