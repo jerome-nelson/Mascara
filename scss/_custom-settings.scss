@@ -65,6 +65,9 @@ $include-html-nav-classes: $no;
 $include-html-off-canvas-classes: $yes;
 $include-html-icon-bar-classes: $yes;
 $include-html-top-bar-classes: $no;
+$include-html-magellan-classes: $yes;
+$include-html-nav-classes: $yes;
+
 
 //Alert Box
 $alert-close-color: rgba($white,0.9);
@@ -402,3 +405,24 @@ $button-round: $global-rounded ;
 $button-disabled-opacity: 0.7 ;
 $button-disabled-cursor: $cursor-default-value ;
 
+// 12. Icon Bar
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use these to style the icon-bar and items
+$icon-bar-bg: $black;
+$icon-bar-font-color: $white;
+$icon-bar-font-color-hover: $icon-bar-font-color;
+$icon-bar-font-size: rem-calc(12);
+// $icon-bar-hover-color: $primary-color;
+// $icon-bar-icon-color: $white;
+// $icon-bar-icon-color-hover: $icon-bar-icon-color;
+$icon-bar-icon-size: rem-calc(18);
+$icon-bar-image-width: rem-calc(12);
+$icon-bar-image-height: rem-calc(12);
+// $icon-bar-active-color: $primary-color;
+$icon-bar-item-padding: rem-calc(12);
+
+// We use this to set default opacity and cursor for disabled icons.
+// $icon-bar-disabled-opacity: 0.7;
+
+//Sub Nav

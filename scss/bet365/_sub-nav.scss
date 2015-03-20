@@ -1,0 +1,25 @@
+@import "../settings";
+@import "../custom-settings";
+@import "../mixins";
+@import "extends";
+
+.sub-nav {
+	@include sub-nav(
+		// Control the color of the divider between links.
+		$font-color: $straight,
+		// Control your font-size per label.
+		$font-size: rem-calc(14),
+		// Change the background color for your labels
+		$active-bg: $green
+	);
+	
+}
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+	margin-left: ($icon-bar-font-size+($icon-bar-item-padding*2));
+	&:before, & .sub-nav a:before {
+		display: none;
+	}
+}
+[data-magellan-expedition] {
+	top: $topbar-height !important;
+}

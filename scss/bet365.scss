@@ -18,8 +18,11 @@
 "foundation/components/breadcrumbs",
 "foundation/components/top-bar",
 "foundation/components/offcanvas",
+"foundation/components/magellan",
+"foundation/components/sub-nav",
 "foundation/components/icon-bar"
 ;
+
 
 //Need CSS Reset stylesheet
 abbr, bdo, b, em, samp, code, kbd{
@@ -77,3 +80,36 @@ ul, p, blockquote, dl,h1,h2,h3,h4,h5,h6 {
 
 //Button
 @import "bet365/button";
+
+//Icon Bar
+.icon-bar {
+			@include embevel_element(adjust-lightness($grey-dark, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
+	&.fixed  {
+		margin-top: $topbar-height; //Prevents icon-bar from overriding
+		position: fixed;
+		left: 0;
+		z-index: 98;
+	}
+}
+.left-off-canvas-toggle[aria-expanded="true"] {
+	& > .aria-open {
+		display: none;
+	}
+	& > .aria-closed {
+		display: block;
+	}
+
+}
+.left-off-canvas-toggle {
+	& > .aria-closed {
+		display: none;
+	}
+	& > .aria-open {
+		display: block;
+	}
+
+}
+
+// @import "bet365/icon-bar";
+//Sub-Nav
+@import "bet365/sub-nav";

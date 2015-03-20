@@ -1,6 +1,22 @@
 @import "../mixins";
 @import "extends";
 
+//Text-Shadow Defaults
+$default-text-shadow-color: rgba(darken($grey,50%),0.7);
+//These defaults make the arguments optional for this mixin If you like, set different defaults in your project
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-v-offset: -1px;
+$default-text-shadow-blur: 0px;
+$default-text-shadow-spread: 0px;
+
+p {
+	font-family: Verdana, $straight;
+	font-size: rem-calc(12);
+	color: scale-lightness($grey,45);
+	@include single-text-shadow;
+}
+
+
 address {
   font-family: Helvetica;
   color: adjust-lightness(gray,-10);
@@ -13,7 +29,6 @@ address {
 	background: $white;
 	@include box-shadow();
 	border-left: $orange dashed 1px;
-	outline: solid 5px $white;
 	font-weight: $font-weight-bold;
 	text-transform: capitalize;
 	font-style: normal;
@@ -22,14 +37,14 @@ address {
 }
 
 kbd {
-	@include border-radius($global-radius);
-	background: adjust-lightness($white, -10);
+	@include border-radius($global-radius*2);
+	@include embevel_element(adjust-lightness($grey-dark, 50),top,adjust-lightness($white, -60),$custom-ratio-pos: 100,$custom-ratio-neg: -100, $custom-element-ratio: 10, $gradient: yes,$fontcolor: rgba($black,0.8));
+	font-size: rem-calc(10);
 	padding: rem-calc(4);
 	font-family: Monospace, sans serif;
 	@include text-shadow(0 0 0);
-	color: $black;
-	border: solid 1px $black;
-	outline: solid 1px $grey-dark;
+	text-align: center;
+	border: solid 1px rgba($black,0.8);
 	margin: rem-calc(5);
 	display: inline-block;
 	
@@ -71,3 +86,87 @@ blockquote {
 		border-width: 0 1px;
 	}
 }
+samp {
+	margin: rem-calc(5);
+	background: $black;
+	color: $green;
+	padding: rem-calc(10);
+}
+
+/* -- Syntax Highlighting */
+/*
+ Make this generic and remove class on <pre>?
+ /web/articles/syntax-highlighting
+ 
+ * pre b = Element
+ * pre b b = Magic Element (includes, labels)
+ * pre i = Comment
+ * pre i i = Magic Comment (Doctype, PI)
+ * pre span = Value or Keyword
+ * pre span span = Magic Value or Keyword (NCR, constants)
+ * pre del = Error
+ * pre ins = Edited
+ * pre var = Varies
+ * pre a = reference via hyperlink
+*/
+/* CSS */
+pre {
+	font-size: rem-calc(12);
+}
+pre code .css { /* Embedded CSS */
+ color: #000;
+}
+.css i { /* Comment */
+ color: #080;
+ font-style: normal;
+}
+.css span { /* Property Value */
+ color: #00f;
+}
+.css b, pre code span.css b { /* Selectors and At-Rules */
+ color: #808;
+ font-weight: normal;
+}
+.css ins, .css ins b { /* Marked change */
+ padding: 0.166em 0 0.083em 0;
+ text-decoration: none;
+ background: #eeeae0;
+}
+/* HTML */
+pre code i { /* Comment */
+ color: #080;
+ font-style: normal;
+ font-weight: normal;
+}
+pre code i i { /* Magic Comment */
+ color: #48c;
+ font-style: normal;
+}
+pre code b { /* Element */
+ color: #808;
+ font-weight: normal;
+}
+pre code b b { /* Magic Element */
+ color: #c48;
+}
+pre code span { /* Value */
+ color: #00f;
+}
+pre code span span { /* Magic Value */
+ color: #f40;
+ font-weight: normal;
+}
+pre code del { /* Error */
+ color: #f00;
+ font-style: normal;
+ text-decoration: underline;
+}
+pre code ins, pre code ins b { /* Changed */
+ padding: 0.166em 0 0.083em 0;
+ text-decoration: none;
+ background: #eeeae0;
+}
+#content pre code a { /* Reference by Hyperlink */
+ color: inherit; /* just underline it */
+}
+

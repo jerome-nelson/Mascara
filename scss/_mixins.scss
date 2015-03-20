@@ -62,6 +62,11 @@
 		@if $text-shadow == yup {
 			@include single-text-shadow;
 		}
+		@else if type-of($text-shadow) == 'color' {
+			@include text-shadow($text-shadow, $default-text-shadow-h-offset, $default-text-shadow-v-offset, $default-text-shadow-blur, $default-text-shadow-spread);
+		}
+		@else {
+		}
 	}
 }
 

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation</title>
     <link rel="stylesheet" href="stylesheets/bet365.css" />
+	 <link rel="stylesheet" href="stylesheets/fontello.css">
+	<!--[if IE 7]><link rel="stylesheet" href="stylesheets/fontello-ie7.css"><![endif]-->
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
 <div class="off-canvas-wrap" data-offcanvas>
+
   <div class="inner-wrap">
 
 
@@ -63,13 +66,22 @@
 			<p>This text is the correct one.</p>
 		</li>
 		<li>
-			<pre>
-			Text in a pre element
-			is displayed in a fixed-width
-			font, and it preserves
-			both      spaces and
-			line breaks
-			</pre>
+			<pre class="css">
+				<code>
+					<i>/* Code Samples */</i>
+					<b>pre</b> {
+					white-space: <span>pre-wrap</span>;
+					white-space: <span>-moz-pre-wrap</span>;
+					white-space: <span>-o-pre-wrap</span>;
+					background: <span>#faf8f0</span>;
+					}
+					<b>#content #pre-stylish code</b> {
+					display: <span>block</span>;
+					padding: <span>0.5em 1em</span>;
+					border: <span>1px solid #bebab0</span>;
+					}
+				</code>
+			</pre>		
 		</li>
 		<li>
 			<p>WWF's goal is to: 
@@ -139,10 +151,34 @@
 	</div>
 	<!-- End of Top Bar Component -->
 
+		<!-- Magellan Component -->
+	<div data-magellan-expedition="fixed"> 
+		<dl class="sub-nav"> 
+			<dd data-magellan-arrival="alert"><a href="#alert">Alert Boxes Component</a></dd> 
+			<dd data-magellan-arrival="common"><a href="#common">Common Components</a></dd> 
+			<dd data-magellan-arrival="accor"><a href="#accor">Accordion</a></dd> 
+			<dd data-magellan-arrival="bgrid"><a href="#bgrid">Block Grid</a></dd> 			
+			<dd data-magellan-arrival="bcrumb"><a href="#bcrumb">Breadcrumb Component</a></dd> 			
+			<dd data-magellan-arrival="interc"><a href="#interc">Interchange Component</a></dd> 			
+		</dl> 
+	</div>	
+	<!-- End of Magellan Component -->
+
+	
+	<!-- Icon Bar -->
+		<div class="vertical icon-bar fixed five-up">
+			<a class="item left-off-canvas-toggle" href="#">
+				<i class="aria-open icon-angle-double-right"></i>
+				<i class="aria-closed icon-angle-double-left"></i>
+			</a>
+		</div>
+	<!-- End of Icon Bar -->
+
+
 	
 	<!-- Alert Boxes Component -->
 	<section class="row">
-		<div class="small-12 columns">
+		<div class="small-12 columns" id="alert" data-magellan-destination="alert">
 			<div data-alert class="alert-box">
 				<div class="text">This is a standard alert-box</div>		 
 				<a href="#" class="close">&times;</a>
@@ -173,50 +209,20 @@
 			</div>
 		</div>
 	</section>
-	<!-- end of Alert Boxes Component -->
-
-	<!-- Icon Bar -->
-	<div class="row">
-		<div class="icon-bar five-up">
-		  <a class="item">
-			<img src="../assets/img/images/fi-home.svg" >
-			<label>Home</label>
-		  </a>
-		  <a class="item">
-			<img src="../assets/img/images/fi-bookmark.svg" >
-			<label>Bookmark</label>
-		  </a>
-		  <a class="item">
-			<img src="../assets/img/images/fi-info.svg" >
-			<label>Info</label>
-		  </a>
-		  <a class="item">
-			<img src="../assets/img/images/fi-mail.svg" >
-			<label>Mail</label>
-		  </a>
-		  <a class="item">
-			<img src="../assets/img/images/fi-like.svg" >
-			<label>Like</label>
-		  </a>
-		</div>
-    </div>
-	<!-- End of Icon Bar -->
+	<!-- end of Alert Boxes Component -->	
 
 	
 		<div class="row">	
-		<a class="left-off-canvas-toggle" href="#" >Menu</a>
-
-		<!-- main content goes here -->
-		<p>Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire. Hari Seldon, a mathematician and psychologist, has developed psychohistory, a new field of science and psychology that equates all possibilities in large societies to mathematics, allowing for the prediction of future events.</p>
-
-	  <!-- close the off-canvas menu -->
-	  <a class="exit-off-canvas"></a>
-	</div>
+			<div class="small-12 columns" data-magellan-destination="common" id="common">
+				<!-- main content goes here -->
+				<p>Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire. Hari Seldon, a mathematician and psychologist, has developed psychohistory, a new field of science and psychology that equates all possibilities in large societies to mathematics, allowing for the prediction of future events.</p>
+			</div>
+		</div>
 
 	
 	<!-- Accordion Component -->
 	<section class="row">
-		<div class="small-12 columns">
+		<div class="small-12 columns" id="accor" data-magellan-destination="accor">
 			<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
 			<ul class="accordion" data-accordion>
 			  <li class="accordion-navigation">
@@ -244,7 +250,7 @@
 	
 	<!-- Block Grid Component -->
 	<section class="row">
-		<div class="small-12 columns">
+		<div class="small-12 columns" data-magellan-destination="bgrid" id="bgrid">
 			<ul class="bg-greydark small-block-grid-4">
 				<li class="has-thumb has-header">
 					<img src="images/thumbnail-test.png" alt="" />
@@ -288,7 +294,7 @@
 	<!-- Breadcrumbs Component -->
 	<div class="bg-embossed darkgrey">
 		<section class="row">
-			<div class="small-12 columns">
+			<div class="small-12 columns" data-magellan-destination="bcrumb" id="bcrumb">
 				<ul class="breadcrumbs">
 					<li><a href="#">Testing</a></li>
 					<li class="unavailable"><a href="">Testing</a></li>
@@ -301,7 +307,7 @@
 	
 	<!-- Interchange Component -->
 	<section class="row">
-		<div class="columns small-12">
+		<div class="columns small-12" data-magellan-destination="interc" id="interc">
 			<img data-interchange="[images/interchange-small-test.jpg, (small)], [images/interchange-large-test.jpg, (large)]">
 			<noscript><img src="images/interchange-small-test.jpg"></noscript>
 		</div>	
