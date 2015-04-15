@@ -1,3 +1,5 @@
+@import "pre-settings";
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -81,7 +83,7 @@ $include-html-global-classes: $include-html-classes;
 
 // $row-width: rem-calc(1000);
 // $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(30);
 
 // $last-child-float: $opposite-direction;
 
@@ -94,8 +96,8 @@ $include-html-global-classes: $include-html-classes;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -128,7 +130,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -137,13 +139,13 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
-// $opposite-direction: right;
+$opposite-direction: right;
 // $default-float: left;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
-// $global-rounded: 1000px;
+$global-radius: 3px;
+$global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
 // $shiny-edge-size: 0 1px 0;
@@ -154,12 +156,12 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
+$medium-range: (40.063em, 64em);
 // $large-range: (64.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
 
-// $screen: "only screen";
+$screen: "only screen";
 
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
@@ -167,7 +169,7 @@ $include-html-global-classes: $include-html-classes;
 // $small-up: $screen;
 // $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 
-// $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
 // $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
 
 // $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
@@ -185,12 +187,12 @@ $include-html-global-classes: $include-html-classes;
 // $large: $large-up;
 
 // We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
-// $cursor-crosshair-value: crosshair;
-// $cursor-default-value: default;
-// $cursor-disabled-value: not-allowed;
-// $cursor-pointer-value: pointer;
-// $cursor-help-value: help;
-// $cursor-text-value: text;
+$cursor-crosshair-value: crosshair;
+$cursor-default-value: default;
+$cursor-disabled-value: not-allowed;
+$cursor-pointer-value: pointer;
+$cursor-help-value: help;
+$cursor-text-value: text;
 
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -328,7 +330,7 @@ $include-html-global-classes: $include-html-classes;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 
-// $accordion-content-padding: ($column-gutter/2);
+$accordion-content-padding: ($column-gutter/2);
 // $accordion-content-active-bg-color: $white;
 
 // 02. Alert Boxes
@@ -381,7 +383,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
+$block-grid-default-spacing: rem-calc(20);
 
 // $align-block-grid-to-grid: false;
 // @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter;}
@@ -402,7 +404,7 @@ $include-html-global-classes: $include-html-classes;
 // $crumb-side-padding: rem-calc(12);
 
 // We use these to control border styles.
-// $crumb-function-factor: -10%;
+$crumb-function-factor: -10%;
 // $crumb-border-size: 1px;
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
@@ -413,8 +415,8 @@ $include-html-global-classes: $include-html-classes;
 // $crumb-font-color: $primary-color;
 // $crumb-font-color-current: $oil;
 // $crumb-font-color-unavailable: $aluminum;
-// $crumb-font-transform: uppercase;
-// $crumb-link-decor: underline;
+$crumb-font-transform: uppercase;
+$crumb-link-decor: underline;
 
 // We use these to control the slash between breadcrumbs
 // $crumb-slash-color: $base;
@@ -432,7 +434,7 @@ $include-html-global-classes: $include-html-classes;
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
-// $button-display: inline-block;
+$button-display: inline-block;
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
@@ -443,15 +445,15 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
-// $button-font-weight: $font-weight-normal;
-// $button-font-align: center;
+$button-font-weight: $font-weight-normal;
+$button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: -20%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
-// $button-border-style: solid;
+$button-border-width: 0;
+$button-border-style: solid;
 // $button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -467,12 +469,12 @@ $include-html-global-classes: $include-html-classes;
 // $info-button-border-color: $info-button-bg-hover;
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
-// $button-round: $global-rounded;
+$button-radius: $global-radius;
+$button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
-// $button-disabled-opacity: 0.7;
-// $button-disabled-cursor: $cursor-default-value;
+$button-disabled-opacity: 0.7;
+$button-disabled-cursor: $cursor-default-value;
 
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -823,7 +825,7 @@ $include-html-global-classes: $include-html-classes;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
-// $tabbar-color: $white;
+$tabbar-color: $white;
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
@@ -842,49 +844,49 @@ $include-html-global-classes: $include-html-classes;
 // $off-canvas-bg: $oil;
 
 // Off Canvas Menu List Variables
-// $off-canvas-label-padding: 0.3rem rem-calc(15);
+$off-canvas-label-padding: 0.3rem rem-calc(15);
 // $off-canvas-label-color: $aluminum;
-// $off-canvas-label-text-transform: uppercase;
-// $off-canvas-label-font-size: rem-calc(12);
-// $off-canvas-label-font-weight: $font-weight-bold;
+$off-canvas-label-text-transform: uppercase;
+$off-canvas-label-font-size: rem-calc(12);
+$off-canvas-label-font-weight: $font-weight-bold;
 // $off-canvas-label-bg: $tuatara;
 // $off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
-// $off-canvas-label-border-bottom: none;
-// $off-canvas-label-margin:0;
-// $off-canvas-link-padding: rem-calc(10, 15);
-// $off-canvas-link-color: rgba($white, 0.7);
+$off-canvas-label-border-bottom: none;
+$off-canvas-label-margin:0;
+$off-canvas-link-padding: rem-calc(10, 15);
+$off-canvas-link-color: rgba($white, 0.7);
 // $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
-// $off-canvas-back-bg: #444;
+$off-canvas-back-bg: #444;
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
-// $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
 // $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
-// $off-canvas-back-hover-border-bottom: none;
+$off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
-// $tabbar-menu-icon-color: $white;
-// $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
+$tabbar-menu-icon-color: $white;
+$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
-// $tabbar-menu-icon-text-indent: rem-calc(35);
+$tabbar-menu-icon-text-indent: rem-calc(35);
 // $tabbar-menu-icon-width: $tabbar-icon-width;
 // $tabbar-menu-icon-height: $tabbar-height;
-// $tabbar-menu-icon-padding: 0;
+$tabbar-menu-icon-padding: 0;
 
-// $tabbar-hamburger-icon-width: rem-calc(16);
-// $tabbar-hamburger-icon-left: false;
-// $tabbar-hamburger-icon-top: false;
-// $tabbar-hamburger-icon-thickness: 1px;
-// $tabbar-hamburger-icon-gap: 6px;
+$tabbar-hamburger-icon-width: rem-calc(16);
+$tabbar-hamburger-icon-left: false;
+$tabbar-hamburger-icon-top: false;
+$tabbar-hamburger-icon-thickness: 1px;
+$tabbar-hamburger-icon-gap: 6px;
 
 // Off Canvas Back-Link Overlay
-// $off-canvas-overlay-transition: background 300ms ease;
-// $off-canvas-overlay-cursor: pointer;
-// $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.5), 4px 0 4px rgba($black, 0.5);
-// $off-canvas-overlay-background: rgba($white, 0.2);
-// $off-canvas-overlay-background-hover: rgba($white, 0.05);
+$off-canvas-overlay-transition: background 300ms ease;
+$off-canvas-overlay-cursor: pointer;
+$off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.5), 4px 0 4px rgba($black, 0.5);
+$off-canvas-overlay-background: rgba($white, 0.2);
+$off-canvas-overlay-background-hover: rgba($white, 0.05);
 
 // Transition Variables
-// $menu-slide: "transform 500ms ease";
+$menu-slide: "transform 500ms ease";
 
 // 19. Orbit
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1386,32 +1388,32 @@ $include-html-global-classes: $include-html-classes;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
-// $topbar-margin-bottom: 0;
+$topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
+$topbar-link-color: $white;
 // $topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
+$topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-hover: $oil;
 // $topbar-link-bg-color-hover: $charcoal;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
+$topbar-link-font-family: $body-font-family;
+$topbar-link-text-transform: none;
 // $topbar-link-padding: ($topbar-height / 3);
 // $topbar-back-link-size: rem-calc(18);
 // $topbar-link-dropdown-padding: rem-calc(20);
 // $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
+$topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
@@ -1420,41 +1422,41 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-bg-hover: $oil;
 // $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
-// $topbar-dropdown-toggle-alpha: 0.4;
+$topbar-dropdown-toggle-alpha: 0.4;
 
 // $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: $font-weight-bold;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
 // $topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
+$topbar-menu-link-color: $white;
+$topbar-menu-icon-color: $white;
 // $topbar-menu-link-color-toggled: $jumbo;
 // $topbar-menu-icon-color-toggled: $jumbo;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
+$topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-// $topbar-media-query: $medium-up;
+$topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
+$topbar-media-query: $medium-up;
 
 // Top-bar input styles
-// $topbar-input-height: rem-calc(28);
+$topbar-input-height: rem-calc(28);
 
 // Divider Styles
 // $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
 // $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
 
 // Sticky Class
-// $topbar-sticky-class: ".sticky";
+$topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 // $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li// 
 

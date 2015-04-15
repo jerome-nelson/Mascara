@@ -1,0 +1,318 @@
+//Mascara by Jerome
+// http://www.jerome-nelson.co.uk
+// This file will override certain settings for default Foundation
+// Licensed under 
+
+//List of Contents
+//
+// A. Foundation Class Includes
+// B. Body CSS
+// C. Custom Variables
+// 
+// 01. Alert Box
+// 	01a. Alert Box Added Content
+//
+// 02. Accordion
+// 	02a. Accordion Added Values
+//
+// 03. Top Bar
+// 	03a. Top Bar Background
+// 	03b. Top Bar Box Model
+// 	03c. Top Bar Title Styles
+//  03d. Top Bar Link Styles (Top Level) 
+//  03e. Top Bar Dropdown Element Style (including links)
+//  03f. Top Bar Menu Icon Styles 
+//  03g. Top Bar Added Values 
+//
+// 04. Breadcrumbs
+// 05. Buttons
+// 06. Off Canvas
+// 07. Icon Bar
+
+
+// A. Foundation Class Includes
+$include-html-classes: $zero;
+$include-html-grid-classes: $one;
+$include-html-accordion-classes: $one;
+$include-html-block-grid-classes: $one;
+$include-html-nav-classes: $zero;
+$include-html-off-canvas-classes: $one;
+$include-html-icon-bar-classes: $one;
+$include-html-top-bar-classes: $zero;
+$include-html-magellan-classes: $one;
+$include-html-nav-classes: $one;
+$include-html-top-bar-classes: $one;
+$include-html-nav-classes: $one;
+//$include-html-form-classes: $one;
+//$include-html-button-classes: $one;
+$include-html-visibility-classes: true;
+
+//B. Body CSS (may be restructured)
+$body-bg: $primary-colour;
+
+//C. Custom Variables (pending removal/relocation)
+//Any custom variables for this theme are here
+$h5-font-size: rem-calc(15);
+
+
+//01. Alert Box
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$alert-close-color: rgba($white,0.9);
+$alert-font-weight: $font-weight-bold;
+$alert-font-color: rgba($white,0.9);
+$alert-font-color-alt: rgba($white,0.9);
+$alert-font-size: rem-calc(16) ;
+$alert-padding-top: 0;
+$alert-padding-default-float: 0;
+$alert-padding-opposite-direction: 0;
+$alert-padding-bottom: 0;
+
+//01a. Alertbox Added Content 
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$alertcontent-padding-top: rem-calc(14) ;
+$alertcontent-padding-default-float: $alertcontent-padding-top ;
+$alertcontent-padding-opposite-direction: $alertcontent-padding-top + rem-calc(10) ;
+$alertcontent-padding-bottom: $alertcontent-padding-top ;
+
+// 02. Accordion
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$accordion-navigation-padding: rem-calc(10);
+$accordion-navigation-bg-color: $primary-lighter;
+$accordion-navigation-font-color: $white;
+$accordion-navigation-font-size: $h5-font-size;
+$accordion-navigation-font-family: $title;
+$accordion-content-active-bg-color: $primary-lighter;
+
+
+//02a. Accordion Added Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$accordion-navigation-font-weight: $font-weight-bold;
+$accordion-navigation-text-style: uppercase;
+$accordion-content-font-size: rem-calc(12);
+$accordion-content-font: $straight;
+
+
+
+
+//03. Top Bar
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+//03a. Top Bar Background
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-bg-color: $secondary-colour;
+$topbar-bg: $topbar-bg-color;
+
+//03b. Top Bar Box Model
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-height: rem-calc(40);
+
+//03c. Top Bar Title Styles
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-title-weight: $font-weight-bold;
+
+//03d. Top Bar Link Styles (Top Level)
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-link-color-hover: $secondary-complement;
+$topbar-link-color-active: darken($secondary-colour,5%);
+$topbar-link-color-active-hover: $secondary-complement;
+$topbar-link-bg: $topbar-bg;
+$topbar-link-bg-hover: darken($secondary-colour,10%);
+$topbar-link-bg-color-hover: $white;
+$topbar-link-bg-active: lighten($secondary-colour,5%);
+$topbar-link-bg-active-hover: scale-color(lighten($primary-colour,5%), $lightness: -14%);
+$topbar-link-padding: ($topbar-height / 3);
+$topbar-back-link-size: $h5-font-size;
+$topbar-link-dropdown-padding: rem-calc(20);
+$topbar-button-font-size: rem-calc(12);
+// $topbar-button-top: 7px;
+
+//03e. Top Bar Dropdown Element Style (including links)
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-dropdown-bg: scale-lightness($primary-lighter,35%);
+$topbar-dropdown-link-color: $black;
+$topbar-dropdown-link-bg: $topbar-dropdown-bg;
+$topbar-dropdown-link-bg-hover: darken($topbar-dropdown-bg,10%);
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-color: $black;
+$topbar-dropdown-label-color: $primary-lighter;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: $secondary-complement;
+
+//03f. Top Bar Menu Icon Styles
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-menu-link-weight: $font-weight-bold;
+$topbar-menu-link-color-toggled: $secondary-complement;
+$topbar-menu-icon-color-toggled: $secondary-complement;
+$topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
+
+
+//03g. Top-bar Added Values
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// 3I. Top-bar Added Styles
+$topbar-button-expand-line-height: $topbar-input-height/125; 
+// (5 where exponent is negative three (-3)
+$topbar-input-height-value: 20;
+
+// 3II. Divider Added Styles
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+
+
+// 3i. Top-bar input styles
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-input-height: rem-calc($topbar-input-height-value);
+
+
+// 3j. Sticky Class
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$topbar-sticky-class: ".sticky";
+$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+
+//4. Breadcrumbs
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// We use this to set the background color for the breadcrumb container.
+$crumb-bg: adjust-lightness($primary-colour,-15);
+
+// We use these to set the padding around the breadcrumbs.
+$crumb-padding: 0;
+$crumb-side-padding: rem-calc(12);
+
+// We use these to control border styles.
+$crumb-border-size: 0;
+$crumb-border-style: none;
+$crumb-border-color: transparent;
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(12);
+$crumb-font-color: $primary-lighter;
+$crumb-font-color-current: $orange;
+$crumb-font-color-unavailable: $darkaqua;
+
+// We use these to control the slash between breadcrumbs
+$crumb-slash-color: $primary-colour; //Needs changing and correlation with current layout colour scheme
+$crumb-slash: " ";
+
+$crumb-li-padding: rem-calc(9 14 9);
+
+//5. Buttons
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$include-html-button-classes: $include-html-classes ;
+
+// We use these to build padding for buttons.
+$button-base-size: rem-calc(10);
+
+//Changed from current static variable setup. Keeps proportion automatically.
+$button-tny: $button-base-size;
+$button-sml: ($button-tny*1.4);
+$button-med: ($button-tny*1.6);
+$button-lrg: ($button-tny*1.8);
+
+// We use this to control the display property.
+$button-margin-bottom: ($button-tny*2);
+
+//NEED TO TEST BUTTON SIZES
+// Create formulas for each original button size (using _settings) (DONE)
+// Create one use mixin to create these
+// We use these to control button text styles.
+$button-font-family: $straight;
+$button-font-color: $black;
+$button-font-color-alt: $white;
+$button-font-tny: rem-calc(($button-tny/$button-tny)+$button-tny);
+$button-font-sml: rem-calc($button-sml - ($button-font-tny*2));
+$button-font-med: rem-calc($button-med -($button-font-tny*3));
+$button-font-lrg: rem-calc($button-lrg + ($button-font-tny*2));
+
+// We use these to control button border styles.
+//TODO: Create mixin to spit out these
+$button-bg-color: $secondary-complement; //-pre_
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor) ;
+$button-border-color: $button-bg-hover;
+$secondary-button-bg-hover: scale-color($orange, $lightness: $button-function-factor) ;
+$secondary-button-border-color: $secondary-button-bg-hover ;
+$success-button-bg-hover: scale-color($primary-colour, $lightness: $button-function-factor) ;
+$success-button-border-color: $success-button-bg-hover ;
+$alert-button-bg-hover: scale-color($primary-lighter, $lightness: $button-function-factor) ;
+$alert-button-border-color: $alert-button-bg-hover ;
+$warning-button-bg-hover: scale-color($orange, $lightness: $button-function-factor) ;
+$warning-button-border-color: $warning-button-bg-hover ;
+$info-button-bg-hover: scale-color($black, $lightness: $button-function-factor) ;
+$info-button-border-color: $info-button-bg-hover ;
+
+
+//6. Off Canvas
+//Checked 
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabbar-bg: $primary-lighter;
+$tabbar-height: rem-calc(70);
+$tabbar-icon-width: $tabbar-height;
+$tabbar-line-height: $tabbar-height;
+$tabbar-middle-padding: 0 rem-calc(5);
+
+// Off Canvas Divider Styles
+$tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%) ;
+$tabbar-right-section-border: $tabbar-left-section-border;
+
+
+// Off Canvas Tab Bar Headers
+$tabbar-header-color: $white ;
+$tabbar-header-weight: $font-weight-bold ;
+$tabbar-header-line-height: $tabbar-height ;
+$tabbar-header-margin: 0 ;
+
+// Off Canvas Menu Variables
+$off-canvas-width: rem-calc(300) ;
+$off-canvas-bg: adjust-lightness($primary-colour, -10) ;
+$off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
+
+// Off Canvas Menu List Variables
+$off-canvas-label-color: $primary-complement;
+$off-canvas-label-bg: $secondary-complement;
+$off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+$off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+$off-canvas-back-border-top: $off-canvas-label-border-top;
+$off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
+$off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+
+$tabbar-menu-icon-width: $tabbar-icon-width; //-pre_
+$tabbar-menu-icon-height: $tabbar-height; //-pre_
+
+//Extra Custom Settings
+$off-canvas-li-font-size: rem-calc(14);
+$off-canvas-li-color: adjust-lightness($primary-lighter,-10);
+$off-canvas-li-color-hover: $white;
+$off-canvas-li-color-active: $secondary-complement;
+
+
+// 7. Icon Bar
+// Checked
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$icon-bar-bg: $black;
+$icon-bar-font-color: $white;
+$icon-bar-font-color-hover: $icon-bar-font-color;
+$icon-bar-font-size: rem-calc(12);
+$icon-bar-icon-size: rem-calc(18);
+$icon-bar-image-width: rem-calc(12);
+$icon-bar-image-height: rem-calc(12);
+$icon-bar-item-padding: rem-calc(10);

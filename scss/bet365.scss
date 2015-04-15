@@ -1,7 +1,7 @@
 @import "settings";
-@import "custom-settings";
+@import "post-settings";
+//@import "custom-settings";
 // @import "foundation";
-@import "mixins";
 @import "bet365/extends";
 
 // Or selectively include components
@@ -83,9 +83,12 @@ ul, p, blockquote, dl,h1,h2,h3,h4,h5,h6 {
 
 //Icon Bar
 .icon-bar {
-			@include embevel_element(adjust-lightness($grey-dark, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
+			@include embevel_element(adjust-lightness($primary-colour, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
+	&:before {
+		border-top: none !important;
+	}
 	&.fixed  {
-		margin-top: $topbar-height; //Prevents icon-bar from overriding
+		margin-top: $topbar-height - 0.01; //Prevents icon-bar from overriding
 		position: fixed;
 		left: 0;
 		z-index: 98;

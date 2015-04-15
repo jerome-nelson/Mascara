@@ -1,8 +1,5 @@
-@import "../mixins";
-@import "extends";
-
 //Text-Shadow Defaults
-$default-text-shadow-color: rgba(darken($grey,50%),0.7);
+$default-text-shadow-color: rgba(darken($primary-lighter,50%),0.7);
 //These defaults make the arguments optional for this mixin If you like, set different defaults in your project
 $default-text-shadow-h-offset: 0px;
 $default-text-shadow-v-offset: -1px;
@@ -12,7 +9,7 @@ $default-text-shadow-spread: 0px;
 p {
 	font-family: Verdana, $straight;
 	font-size: rem-calc(12);
-	color: scale-lightness($grey,45);
+	color: scale-lightness($primary-lighter,45);
 	@include single-text-shadow;
 }
 
@@ -38,7 +35,7 @@ address {
 
 kbd {
 	@include border-radius($global-radius*2);
-	@include embevel_element(adjust-lightness($grey-dark, 50),top,adjust-lightness($white, -60),$custom-ratio-pos: 100,$custom-ratio-neg: -100, $custom-element-ratio: 10, $gradient: yes,$fontcolor: rgba($black,0.8));
+	@include embevel_element(adjust-lightness($primary-colour, 50),top,adjust-lightness($white, -60),$custom-ratio-pos: 100,$custom-ratio-neg: -100, $custom-element-ratio: 10, $gradient: yes,$fontcolor: rgba($black,0.8));
 	font-size: rem-calc(10);
 	padding: rem-calc(4);
 	font-family: Monospace, sans serif;
@@ -89,7 +86,7 @@ blockquote {
 samp {
 	margin: rem-calc(5);
 	background: $black;
-	color: $green;
+	color: $primary-colour;
 	padding: rem-calc(10);
 }
 

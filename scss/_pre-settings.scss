@@ -1,5 +1,53 @@
+//Mascara by Jerome
+// http://www.jerome-nelson.co.uk
+// This file will override certain settings for default Foundation
+// Licensed under 
+
+//Imports
 @import "compass/css3";
 
+
+//List of Contents
+//
+// a. Bools
+// b. Colour Scheme
+// c. Fonts
+// d. Mixins
+// e. Compass Globals
+
+//a. Bools - used for now 
+// TODO: Once finished building, remove dependencies by removing all CSS default classes.
+$one: true;
+$zero: false;
+
+//b. Colour Scheme (used to create layout colours) - Overriden in future files
+//Colour List (used on colour dependencies - will be removed once all colours have been mapped to sass functions).
+$green: #158560;
+$grey-dark: #404040;
+$black: #000;
+$white: #fff;
+// $grey: #656868;
+//$yellow: #fddb1d;
+
+// $brown: #6c604e; 
+$darkaqua: #22566e; 
+$orange: #bb892c;
+
+
+
+$primary-colour: $grey-dark !default;
+$primary-lighter: lighten($primary-colour, 25);
+$primary-complement: lighten(saturate(adjust_hue($primary-colour, 30), 15), 10%);
+$secondary-colour: $green !default;
+$secondary-complement: lighten(adjust_hue(saturate($secondary-colour, 25), 255), 25%); //Currently comes out with yellow. Thanks to SASS-Color-Picker
+
+//c. Fonts
+//Font Library
+$straight: Calibri, Arial, sans serif;
+$title: 'Microsoft New Tai Lue', serif;
+$font-family-sans-serif: $straight;
+
+//d. Mixins
 @mixin embevel_color($color,$position,$li_mode: false,$custom-ratio-pos: 15,$custom-ratio-neg: -15, $custom-element-ratio: 10,$custom-gradient: false) {
 	@if $li_mode {
 		
@@ -92,3 +140,13 @@
 		@include box-shadow(0 0 0 transparent !important);
 		@include text-shadow(0 0 0 transparent);
 }
+
+//e. Compass Globals//Compass Config
+//Text-Shadow Defaults
+$default-text-shadow-color: rgba(darken($primary-lighter,50%),0.7);
+
+//These defaults make the arguments optional for this mixin If you like, set different defaults in your project
+$default-text-shadow-h-offset: -1px;
+$default-text-shadow-v-offset: 0px;
+$default-text-shadow-blur: 0px;
+$default-text-shadow-spread: 0px;

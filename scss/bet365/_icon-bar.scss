@@ -357,3 +357,6 @@ $icon-bar-disabled-cursor: $cursor-disabled-value !default;
     }
 	}
 }
+.icon-bar:before {
+  border-top: none;
+}

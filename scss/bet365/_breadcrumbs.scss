@@ -1,7 +1,3 @@
-@import "../mixins";
-@import "extends";
-
-
 .breadcrumbs {
   @include crumb-container;
   display: table;

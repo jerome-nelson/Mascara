@@ -8,9 +8,9 @@
 		@include text-shadow();
 		}
 		> li {
-			background: $grey !important;
-					border-right: solid 1px darken($grey, 5%);
-		border-left: solid 1px lighten($grey, 5%);
+			background: $primary-lighter !important;
+					border-right: solid 1px darken($primary-lighter, 5%);
+		border-left: solid 1px lighten($primary-lighter, 5%);
 
 		}
 	}
@@ -26,7 +26,7 @@
 		padding: 0 !important;
 	}
 	> li img {
-		border: solid 2px $grey-dark;
+		border: solid 2px $primary-colour;
 		padding: 0 !important;
 		width: 100%;
 		
@@ -46,8 +46,8 @@
 			text-transform: uppercase;
 			position: relative;
 			margin: 0;
-			background: $green;
-			border-top: solid 1px lighten($green,10%);
+			background: $secondary-colour;
+			border-top: solid 1px lighten($secondary-colour,10%);
 			border-bottom: solid 1px lighten($black, 30%);
 		}
 		> p {

@@ -1,11 +1,7 @@
-@import "custom-settings";
-@import "mixins";
-@import "bet365/extends";
-
 .button,button {
 	@include button-base;
 	@include border-radius($global-radius);
-	@include embevel_element($yellow, $gradient: yes,$text-shadow: false,$custom-ratio-pos: 10,$custom-ratio-neg: -5,$fontcolor: $black);
+	@include embevel_element($secondary-complement, $gradient: yes,$text-shadow: false,$custom-ratio-pos: 10,$custom-ratio-neg: -5,$fontcolor: $black);
 	text-transform: uppercase;
 	border: solid 1px rgba($black,0.50);
 	font-weight: $font-weight-bold;

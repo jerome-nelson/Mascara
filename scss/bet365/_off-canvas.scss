@@ -20,9 +20,9 @@
 			& a:before  {
 				display: inline !important;
 			}
-			@include embevel_element(adjust-lightness($grey-dark, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
+			@include embevel_element(adjust-lightness($primary-colour, -10),top,no,$custom-ratio-pos: 5,$custom-ratio-neg: -5, $custom-element-ratio: 10, $gradient: yes);
 			&:hover, &.selected {
-				@include embevel_element($grey,$gradient: yes,$text-shadow: false);
+				@include embevel_element($primary-lighter,$gradient: yes,$text-shadow: false);
 			}
 			&:hover {
 				color: $off-canvas-li-color-hover;

@@ -1,7 +1,4 @@
-@import "../mixins";
-@import "extends";
-	
-$newgrey: adjust-hue($grey, 15);
+$newgrey: adjust-hue($primary-lighter, 15);
 
 
 //Alert Boxes
@@ -25,11 +22,11 @@ $newgrey: adjust-hue($grey, 15);
 	
 	
     &.success { 
-		@include alert-style($green);
+		@include alert-style($secondary-colour);
 		&:hover {
-			@include hover-color($green);		
+			@include hover-color($secondary-colour);		
 		}
-		@include embevel_color($green, top);
+		@include embevel_color($secondary-colour, top);
 	  }
       &.warning {
 	  
@@ -42,15 +39,15 @@ $newgrey: adjust-hue($grey, 15);
 			@include embevel_color($newblack, top);
 	  }
       &.secondary { 
-	  	  	@include alert-style($yellow);
+	  	  	@include alert-style($secondary-complement);
 			&:hover {
-				@include hover-color($yellow);		
+				@include hover-color($secondary-complement);		
 			}
-			@include embevel_color($yellow, top);
+			@include embevel_color($secondary-complement, top);
 	  }
       &.info { 
 	  
-		$newgreen: adjust-lightness($green, 10);
+		$newgreen: adjust-lightness($secondary-colour, 10);
 	  
 		@include alert-style($newgreen);
 		
@@ -73,6 +70,6 @@ $newgrey: adjust-hue($grey, 15);
 		opacity: 0;
 	  }
   & {
-	border: solid 1px rgba($grey, 0.50);
+	border: solid 1px rgba($primary-lighter, 0.50);
   }
 }
