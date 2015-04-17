@@ -167,3 +167,12 @@ pre code ins, pre code ins b { /* Changed */
  color: inherit; /* just underline it */
 }
 
+@include value-list(rounded,border-radius,(all top bottom), ($global-radius, $global-radius $global-radius 0 0, 0 0 $global-radius $global-radius));
+@include value-list(rounded,margin,(all top bottom), ($global-radius 0, $global-radius 0 0, 0 0 $global-radius));
+
+.rounded-bottom + .rounded-top {
+	margin-top: 0 !important;
+}
+[class*="rounded-"]>[class*="rounded-"] {
+	margin: 0;
+}

@@ -37,15 +37,23 @@ $orange: #bb892c;
 
 $primary-colour: $grey-dark !default;
 $primary-lighter: lighten($primary-colour, 25);
+$primary-darker: darken($primary-colour, 15);
 $primary-complement: lighten(saturate(adjust_hue($primary-colour, 30), 15), 10%);
 $secondary-colour: $green !default;
+$secondary-lighter: lighten($secondary-colour, 25);
+$secondary-darker: darken($secondary-colour, 15);
 $secondary-complement: lighten(adjust_hue(saturate($secondary-colour, 25), 255), 25%); //Currently comes out with yellow. Thanks to SASS-Color-Picker
+
+$colour-list: primary-colour, primary-lighter, primary-darker, primary-complement, secondary-colour, secondary-lighter, secondary-darker, secondary-complement;
+$colour-scheme: $primary-colour, $primary-lighter, $primary-darker, $primary-complement, $secondary-colour, $secondary-lighter, $secondary-darker, $secondary-complement;
 
 //c. Fonts
 //Font Library
 $straight: Calibri, Arial, sans serif;
 $title: 'Microsoft New Tai Lue', serif;
 $font-family-sans-serif: $straight;
+$bet365: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,"Segoe UI",Roboto,"Droid Sans",Arial,sans-serif;
+
 
 //d. Mixins
 @mixin embevel_color($color,$position,$li_mode: false,$custom-ratio-pos: 15,$custom-ratio-neg: -15, $custom-element-ratio: 10,$custom-gradient: false) {
@@ -140,6 +148,22 @@ $font-family-sans-serif: $straight;
 		@include box-shadow(0 0 0 transparent !important);
 		@include text-shadow(0 0 0 transparent);
 }
+
+// Creates a looped set of rules based off array lists 
+@mixin value-list($classname-prepend,$class,$listnames, $listvalues) {
+	/* #{$class} CSS */
+	@each $value in $listvalues {	
+		.#{$classname-prepend}-#{nth($listnames, index($listvalues, $value))} {
+				
+			/*	@if type-of($value) == number {
+					#{$class}: rem-calc($value) !important; 
+				} */
+					#{$class}: $value !important;
+		}
+	}
+}
+
+
 
 //e. Compass Globals//Compass Config
 //Text-Shadow Defaults

@@ -29,7 +29,6 @@
 // 06. Off Canvas
 // 07. Icon Bar
 
-
 // A. Foundation Class Includes
 $include-html-classes: $zero;
 $include-html-grid-classes: $one;
@@ -49,10 +48,14 @@ $include-html-visibility-classes: true;
 
 //B. Body CSS (may be restructured)
 $body-bg: $primary-colour;
+$row-width: rem-calc(1366);
 
 //C. Custom Variables (pending removal/relocation)
 //Any custom variables for this theme are here
 $h5-font-size: rem-calc(15);
+$h3-font-size: 20;
+$block-styled-grid-padding: rem-calc(10) rem-calc(15);
+$h3-font-color: adjust-lightness($primary-lighter,45%);
 
 
 //01. Alert Box

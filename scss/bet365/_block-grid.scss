@@ -1,7 +1,31 @@
+@each $value in $colour-scheme {
+		//Incorporate into previous loop used on bet365.scss
+		[class*="bg-#{nth($colour-list, index($colour-scheme, $value))}"] {
+			border: none;
+			 > li {
+				border-top: solid 1px lighten($value,5%);
+				border-left: solid 1px lighten($value,5%);
+				border-bottom: solid 1px darken($value,5%);
+				border-right: solid 1px darken($value,5%);
+				padding: 0;
+				
+				//TODO: Remove importants
+				> a {
+					color: $h3-font-color;//Need to create .extend or correlate this value to a context
+					font-family: $bet365; //Need to create .extend or correlate this value to a context
+					font-weight: $font-weight-bold; //Need to create .extend or correlate this value to a context
+					font-size: rem-calc(14);
+					@include text-shadow(0 -1px 0 rgba($black,.2)); //Need to create .extend or correlate this value to a context
+					display: block !important;
+					padding: $block-styled-grid-padding !important;
+				}
+			}
+		}
+}
+
 [class*="block-grid-"] {
-	@include box-shadow();
-	margin: rem-calc(10) 0;
-	
+//	@include box-shadow();
+	margin: 0 !important;
 	&.bg-greydark {
 		li {
 		color: $white !important;
@@ -15,7 +39,7 @@
 		}
 	}
 }
-[class*="block-grid-"]  {
+/* [class*="block-grid-"]  {
 	display: table !important;
 	 table-layout: fixed;
 	 width: 100%;
@@ -73,4 +97,4 @@
 	> li:nth-of-type(4n) {
 	//	display: table-row !important;
 	}
-}
+} */

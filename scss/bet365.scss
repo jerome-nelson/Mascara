@@ -1,3 +1,6 @@
+//TODO: wth-arr-right/wth-arr-left
+// Add in fontello content: after/before
+// For block grid only
 @import "settings";
 @import "post-settings";
 //@import "custom-settings";
@@ -23,7 +26,42 @@
 "foundation/components/icon-bar"
 ;
 
+section {
+	margin: rem-calc(10) 0;
+}
 
+h3, h5 {
+	color: $h3-font-color;
+	font-family: $bet365;
+	font-size: rem-calc($h3-font-size);
+	padding-left: rem-calc(15) !important; //TODO: Remove important. Currenjtly set to the same as block grid (maybe make unive-rsal)
+	text-transform: uppercase;
+	@include text-shadow(0 -1px 0 rgba($black,.2));
+}
+h5 {
+	font-size: $h5-font-size;
+}
+
+.regular-tab-style {
+	padding: rem-calc(15) 0;
+}
+@include value-list(bg,background-color, $colour-list, $colour-scheme);
+
+@each $value in $colour-scheme {
+	.graded-#{nth($colour-list, index($colour-scheme, $value))} {
+		background-color: $value;
+					border-top: solid 1px adjust-lightness($value,10%);
+			border-bottom: solid 1px adjust-lightness($value,-10%);		
+
+	}
+}
+.object-fx {
+	border: solid 1px adjust-lightness($primary-darker,10%);
+	@extend .rounded-all;
+	& > [class*="rounded-"] {
+		margin: 0 !important;
+	}
+}
 //Need CSS Reset stylesheet
 abbr, bdo, b, em, samp, code, kbd{
 	display: block;
@@ -32,9 +70,9 @@ img {
 	@include single-box-shadow;
 }
 *:before {
-	display: block;
-	content: " ";
-	width: 100%;
+//	display: block;
+//	content: " ";
+//	width: 100%;
 }
 * > a {
 	text-decoration: none;
