@@ -37,7 +37,6 @@ $include-html-block-grid-classes: $one;
 $include-html-nav-classes: $zero;
 $include-html-off-canvas-classes: $one;
 $include-html-icon-bar-classes: $one;
-$include-html-top-bar-classes: $zero;
 $include-html-magellan-classes: $one;
 $include-html-nav-classes: $one;
 $include-html-top-bar-classes: $one;
@@ -47,7 +46,7 @@ $include-html-nav-classes: $one;
 $include-html-visibility-classes: true;
 
 //B. Body CSS (may be restructured)
-$body-bg: $primary-colour;
+$body-bg: $primary-darker;
 $row-width: rem-calc(1366);
 
 //C. Custom Variables (pending removal/relocation)
@@ -117,20 +116,24 @@ $topbar-bg: $topbar-bg-color;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $topbar-height: rem-calc(40);
+$topbar-link-padding: ($topbar-height / 3);
+$topbar-li-padding: $topbar-height/5;
+$topbar-line-height: rem-calc(40)/2;
 
 //03c. Top Bar Title Styles
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
+$topbar-title-link-color: $white;
 $topbar-title-weight: $font-weight-bold;
 
 //03d. Top Bar Link Styles (Top Level)
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$topbar-link-color-hover: $secondary-complement;
-$topbar-link-color-active: darken($secondary-colour,5%);
-$topbar-link-color-active-hover: $secondary-complement;
-$topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: darken($secondary-colour,10%);
+$topbar-link-color: $secondary-complement;
+$topbar-link-color-hover: $topbar-link-color;
+$topbar-link-color-active: $topbar-link-color;
+$topbar-link-color-active-hover: $topbar-link-color;
+$topbar-link-bg: darken($secondary-colour,10%);
+$topbar-link-bg-hover: $secondary-darker;
 $topbar-link-bg-color-hover: $white;
 $topbar-link-bg-active: lighten($secondary-colour,5%);
 $topbar-link-bg-active-hover: scale-color(lighten($primary-colour,5%), $lightness: -14%);
@@ -169,6 +172,7 @@ $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for
 $topbar-button-expand-line-height: $topbar-input-height/125; 
 // (5 where exponent is negative three (-3)
 $topbar-input-height-value: 20;
+$topbar-link-border-bg: $secondary-darker;
 
 // 3II. Divider Added Styles
 $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
@@ -221,7 +225,7 @@ $crumb-li-padding: rem-calc(9 14 9);
 $include-html-button-classes: $include-html-classes ;
 
 // We use these to build padding for buttons.
-$button-base-size: rem-calc(10);
+$button-base-size: 10;
 
 //Changed from current static variable setup. Keeps proportion automatically.
 $button-tny: $button-base-size;
@@ -237,12 +241,13 @@ $button-margin-bottom: ($button-tny*2);
 // Create one use mixin to create these
 // We use these to control button text styles.
 $button-font-family: $straight;
-$button-font-color: $black;
+$button-font-color: $primary-colour;
 $button-font-color-alt: $white;
 $button-font-tny: rem-calc(($button-tny/$button-tny)+$button-tny);
 $button-font-sml: rem-calc($button-sml - ($button-font-tny*2));
 $button-font-med: rem-calc($button-med -($button-font-tny*3));
 $button-font-lrg: rem-calc($button-lrg + ($button-font-tny*2));
+$button-font-weight: $font-weight-bold;
 
 // We use these to control button border styles.
 //TODO: Create mixin to spit out these

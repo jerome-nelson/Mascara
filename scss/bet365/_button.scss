@@ -1,8 +1,13 @@
-.button,button {
+//TODO: Add in radius and rounded classes
+
+/*.button,button {
 	@include button-base;
+	line-height: ($button-sml/$button-base-size)*2;
+	padding: 0 !important;
+	font-size: $button-font-sml;
+	@include text-shadow(0 1px rgba($white,.25));
 	@include border-radius($global-radius);
 	@include embevel_element($secondary-complement, $gradient: yes,$text-shadow: false,$custom-ratio-pos: 10,$custom-ratio-neg: -5,$fontcolor: $black);
-	text-transform: uppercase;
 	border: solid 1px rgba($black,0.50);
 	font-weight: $font-weight-bold;
 
@@ -19,4 +24,65 @@
 		border-top: none; //Removes the embevel_element border-top
 	}
   
- }
+ } */
+    // Default styles applied outside of media query
+    button, .button {
+	
+	  //Top Bar Overrides - Remove manual overrides for top-bar
+      position: static !important;
+     height: auto !important; 
+  //    top: 0 !important;
+     padding: 0  rem-calc(10) !important; //TODO: Find top-bar padding-top: for button and remove/overwrite (look in components)
+	  //END OF Top BAr Overrides
+	  
+	  //Foundation mixins
+	  @include button-base(false);
+	  text-align: $button-font-align;
+	  font-weight: $button-font-weight;
+	  @include button-style();
+	  background-color: $button-bg-color;
+	  color: $button-font-color;
+	  &, &.medium {
+		font-size: $button-font-med !important;
+		line-height: ($button-med/$button-base-size);
+	  }
+//      @include button-size;
+//      @include button-style;
+
+      @include single-transition(background-color);
+
+		&.secondary { @include button-style($bg:$primary-lighter, $bg-hover:$primary-complement, $border-color:$primary-lighter); }
+//      &.success   { @include button-style($bg:$primary-colour, $bg-hover:$primary-complement, $border-color:$primary-lighter); }
+//      &.alert     { @include button-style($bg:$alert-color, $bg-hover:$alert-button-bg-hover, $border-color:$alert-button-border-color); }
+ //     &.warning   { @include button-style($bg:$warning-color, $bg-hover:$warning-button-bg-hover, $border-color:$warning-button-border-color); }
+ //     &.info      { @include button-style($bg:$info-color, $bg-hover:$info-button-bg-hover, $border-color:$info-button-border-color); }
+
+  //    &.large  { @include button-size($padding: 0 $button-lrg); }
+   //   &.small  { @include button-size($padding:$button-sml); }
+    //  &.tiny   { @include button-size($padding:$button-tny); }
+    //  &.expand { @include button-size($padding:null,$full-width:true); }
+
+     // &.left-align  { text-align: left; text-indent: rem-calc(12); }
+     // &.right-align { text-align: right; padding-right: rem-calc(12); }
+
+//      &.radius { @include button-style($bg:false, $radius:true); }
+ //     &.round  { @include button-style($bg:false, $radius:$button-round); }
+
+  //    &.disabled, &[disabled] { @include button-style($bg:$button-bg-color, $disabled:true, $bg-hover:$button-bg-hover, $border-color:$button-border-color);
+   //     &.secondary { @include button-style($bg:$secondary-color, $disabled:true, $bg-hover:$secondary-button-bg-hover, $border-color:$secondary-button-border-color); }
+    //    &.success { @include button-style($bg:$success-color, $disabled:true, $bg-hover:$success-button-bg-hover, // $border-color:$success-button-border-color); }
+    //    &.alert { @include button-style($bg:$alert-color, $disabled:true, $bg-hover:$alert-button-bg-hover, $border-color:$alert-button-border-color); }
+     //   &.warning { @include button-style($bg:$warning-color, $disabled:true, $bg-hover:$warning-button-bg-hover, $border-color:$warning-button-border-color); }
+    //    &.info { @include button-style($bg:$info-color, $disabled:true, $bg-hover:$info-button-bg-hover, $border-color:$info-button-border-color); }
+   //   }
+    }
+
+    //firefox 2px fix
+    button::-moz-focus-inner {border:0; padding:0;}
+
+    @media #{$medium-up} {
+      button, .button {
+//        @include button-base($style:false, $display:inline-block);
+        @include button-size($padding:false, $full-width:false);
+      }
+    }

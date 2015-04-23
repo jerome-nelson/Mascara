@@ -18,9 +18,13 @@
 					@include text-shadow(0 -1px 0 rgba($black,.2)); //Need to create .extend or correlate this value to a context
 					display: block !important;
 					padding: $block-styled-grid-padding !important;
+		
 				}
 			}
 		}
+}
+ul.font-light > li > a {
+	font-weight: $font-weight-normal !important;
 }
 
 [class*="block-grid-"] {

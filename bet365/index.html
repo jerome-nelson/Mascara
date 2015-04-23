@@ -13,46 +13,33 @@
 
 	
 	<!-- Header Component -->
-	<header class="bg-secondary-colour">
-		<section class="row">
-			<div class="columns small-2">
-				<h1><a href="./index.html">Mascara</a></h1>
-			</div>
-			<div class="columns small-8">
-				asdsa
-			</div>
-			<div class="columns small-2">
-				<ul class="small-block-grid-2">
-					<li><div class="button small">Login</div></li>
-					<li><div class="button large">Register</div></li>
+	<nav data-topbar role="navigation" class="top-bar bg-secondary-colour">
+			<ul class="title-area medium-2 columns small-collapse">
+				<li class="name">
+					<h1><a href="./index.html">Mascara</a></h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+			<div class="top-bar-section">
+				<ul class="left main-navigation">
+					<li><a href="#">Link Test</a></li>
+					<li class="active"><a href="#">Link Test</a></li>
+				</ul>
+				<ul class="right">
+					<li>
+						<div class="button">Login</div> 
+						<div class="button secondary">Register</div>
+					</li>
 				</ul>
 			</div>
-		</section>
-	</header>
+	</nav>
 	<!-- End of Header Component -->
 
 	<main>
 		<div class="row collapse">
-			<div class="columns small-2">asd</div>
-			<section class="columns small-10">
-			<div class="rounded-top rounded-bottom object-fx row collapse">
-				<div class="small-12 columns graded-secondary-colour rounded-top regular-tab-style">
-					<h3>Offers</h3>
-				</div>	
-				<div class="small-12 columns">
-					<ul class="small-block-grid-2  bg-primary-lighter">
-						<li><a href="#">100% Deposit Bonus</a></li>
-						<li><a href="#">Button ></a></li>
-						<li><a href="#">Button ></a></li>
-						<li><a href="#">Button ></a></li>
-						<li><a href="#">Button ></a></li>
-					</ul>
-				</div>
-
-				<div class="small-12 columns graded-secondary-colour"><h3>Live Inplay<h3></div>
-				<div class="small-12 columns graded-secondary-darker"><h5>Soccer</h5></div>
-				<div class="small-12 columns">
-					<ul class="small-block-grid-1 bg-primary-lighter">
+			<div class="columns small-2">
+				<div class="row collapse">
+					<ul class="small-block-grid-1 font-light bg-primary-darker">
 						<li><a href="#">Test ></a></li>
 						<li><a href="#">Test ></a></li>
 						<li><a href="#">Test ></a></li>
@@ -64,25 +51,27 @@
 						<li><a href="#">Test ></a></li>
 						<li><a href="#">Test ></a></li>
 					</ul>
-				</div>
-				<div class="small-12 columns graded-secondary-complement"><h5>Baseball</h5></div>
+				</div>			
+			</div>
+			<div class="columns small-10 bg-primary-colour">
+			<section class="columns small-12">
+				<div class="rounded-top rounded-bottom object-fx row collapse">
+					<div class="small-12 columns graded-secondary-colour rounded-top regular-tab-style">
+						<h3>Offers</h3>
+					</div>	
 					<div class="small-12 columns">
-						<ul class="small-block-grid-1  bg-primary-lighter">
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
+						<ul class="small-block-grid-2  bg-primary-lighter">
+							<li><a href="#">100% Deposit Bonus</a></li>
+							<li><a href="#">Button ></a></li>
+							<li><a href="#">Button ></a></li>
+							<li><a href="#">Button ></a></li>
+							<li><a href="#">Button ></a></li>
 						</ul>
 					</div>
 
-				<div class="small-12 columns graded-primary-complement"><h5>Tennis</h5></div>
-					<div class="small-12 columns rounded-bottom">
+					<div class="small-12 columns graded-secondary-colour"><h3>Live Inplay<h3></div>
+					<div class="small-12 columns graded-secondary-darker"><h5>Soccer</h5></div>
+					<div class="small-12 columns">
 						<ul class="small-block-grid-1 bg-primary-lighter">
 							<li><a href="#">Test ></a></li>
 							<li><a href="#">Test ></a></li>
@@ -96,36 +85,68 @@
 							<li><a href="#">Test ></a></li>
 						</ul>
 					</div>
-				</div>
-				<div class="object-fx row collapse">
-					<div class="small-12 columns graded-secondary-colour rounded-top"><h5>Highlights</h5></div>
-					<div class="small-12 columns rounded-bottom">
-						<ul class=" bg-primary-lighter small-block-grid-2">
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-						</ul>
+					<div class="small-12 columns graded-secondary-complement"><h5>Baseball</h5></div>
+						<div class="small-12 columns">
+							<ul class="small-block-grid-1  bg-primary-lighter">
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+							</ul>
+						</div>
+
+					<div class="small-12 columns graded-primary-complement"><h5>Tennis</h5></div>
+						<div class="small-12 columns rounded-bottom">
+							<ul class="small-block-grid-1 bg-primary-lighter">
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				
-				<div class="object-fx row collapse">
-					<div class="small-12 columns graded-primary-lighter rounded-all">
-						<ul class="small-block-grid-1 bg-primary-lighter">
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-							<li><a href="#">Test ></a></li>
-						</ul>
+					<div class="object-fx row collapse">
+						<div class="small-12 columns graded-secondary-colour rounded-top"><h5>Highlights</h5></div>
+						<div class="small-12 columns rounded-bottom">
+							<ul class=" bg-primary-lighter small-block-grid-2">
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</section>
+					
+					<div class="object-fx row collapse">
+						<div class="small-12 columns graded-primary-lighter rounded-all">
+							<ul class="small-block-grid-1 bg-primary-lighter">
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+								<li><a href="#">Test ></a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 	</main>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>

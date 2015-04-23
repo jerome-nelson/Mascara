@@ -26,6 +26,13 @@
 "foundation/components/icon-bar"
 ;
 
+.test {
+	> * {
+		background: red !important;
+	}
+}
+
+
 section {
 	margin: rem-calc(10) 0;
 }
